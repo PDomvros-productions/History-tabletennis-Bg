@@ -724,6 +724,269 @@
         min-height:76px;
       }
     }
+  
+
+    /* DUAL-PURPOSE COMPACT MODES FOR LAPTOP HEIGHTS */
+    @media (min-width: 821px) and (max-height: 980px) {
+      :root {
+        --board-side-pad: clamp(8px, 1vw, 16px);
+        --board-gap: clamp(8px, 0.7vw, 12px);
+        --board-card-radius: clamp(16px, 1.2vw, 22px);
+        --board-control-height: clamp(48px, 4.9vh, 62px);
+        --board-answer-height: clamp(68px, 8.1vh, 96px);
+        --board-ui-font: clamp(0.96rem, 0.9vw, 1.12rem);
+        --board-title-font: clamp(1.58rem, 1.95vw, 2.4rem);
+        --board-question-font: clamp(1.24rem, 1.42vw, 1.82rem);
+        --board-score-font: clamp(2rem, 2.1vw, 3rem);
+      }
+
+      body.smartboard-mode #gameScreen {
+        overflow: auto;
+      }
+
+      body.smartboard-mode .wrap {
+        min-height: calc(100vh - (var(--board-side-pad) * 2));
+        grid-template-rows: auto auto clamp(72px, 8.2vh, 96px) 1fr auto;
+      }
+
+      body.smartboard-mode .topHeader {
+        padding: 14px clamp(80px, 5vw, 110px) 14px 18px;
+      }
+
+      body.smartboard-mode .topHeader p {
+        font-size: clamp(0.96rem, 0.94vw, 1.14rem);
+      }
+
+      body.smartboard-mode .topHeader .cornerLogo {
+        width: clamp(58px, 4.1vw, 82px);
+      }
+
+      body.smartboard-mode .controlPanel {
+        padding: 10px 12px;
+        gap: 10px;
+      }
+
+      body.smartboard-mode .controlGroup label {
+        margin-bottom: 5px;
+        font-size: clamp(0.86rem, 0.86vw, 1rem);
+      }
+
+      body.smartboard-mode .controlGroup select,
+      body.smartboard-mode .controlGroup button {
+        border-radius: 14px;
+        padding: 10px 14px;
+      }
+
+      body.smartboard-mode .scoreboard {
+        gap: 10px;
+      }
+
+      body.smartboard-mode .playerCard,
+      body.smartboard-mode .midInfo {
+        min-height: clamp(100px, 11.5vh, 132px);
+        padding: 12px 14px;
+      }
+
+      body.smartboard-mode .avatarDisplay {
+        font-size: clamp(1.7rem, 1.9vw, 2.4rem);
+      }
+
+      body.smartboard-mode .playerCard h2 {
+        font-size: clamp(0.96rem, 0.96vw, 1.14rem);
+      }
+
+      body.smartboard-mode .turnLight {
+        width: 18px;
+        height: 18px;
+      }
+
+      body.smartboard-mode .arena {
+        height: clamp(72px, 8.2vh, 96px);
+      }
+
+      body.smartboard-mode .net {
+        width: 5px;
+        background: repeating-linear-gradient(to bottom, #8c8db2 0 8px, transparent 8px 13px);
+      }
+
+      body.smartboard-mode .ball {
+        width: clamp(22px, 1.45vw, 30px);
+        height: clamp(22px, 1.45vw, 30px);
+      }
+
+      body.smartboard-mode .questionPanel {
+        padding: 12px 14px 14px;
+        gap: 10px;
+      }
+
+      body.smartboard-mode .turnText {
+        font-size: clamp(1rem, 0.98vw, 1.2rem);
+      }
+
+      body.smartboard-mode .category {
+        padding: 8px 14px;
+        font-size: clamp(0.88rem, 0.9vw, 1rem);
+      }
+
+      body.smartboard-mode .question {
+        min-height: clamp(92px, 12.8vh, 132px);
+        padding: 12px 14px;
+        border-radius: 16px;
+        line-height: 1.18;
+      }
+
+      body.smartboard-mode .answers {
+        gap: 10px;
+      }
+
+      body.smartboard-mode .answerBtn {
+        border-radius: 16px;
+        padding: 12px 14px;
+        font-size: clamp(1.02rem, 1vw, 1.24rem);
+        line-height: 1.15;
+      }
+
+      body.smartboard-mode .message,
+      body.smartboard-mode .smallNote,
+      body.smartboard-mode #gameScreen .globalFooter {
+        font-size: clamp(0.84rem, 0.82vw, 0.96rem);
+      }
+    }
+
+    @media (min-width: 821px) and (max-height: 860px) {
+      :root {
+        --board-side-pad: 8px;
+        --board-gap: 8px;
+        --board-card-radius: 16px;
+        --board-control-height: 44px;
+        --board-answer-height: 60px;
+        --board-ui-font: clamp(0.9rem, 0.82vw, 1rem);
+        --board-title-font: clamp(1.4rem, 1.65vw, 1.9rem);
+        --board-question-font: clamp(1.08rem, 1.14vw, 1.42rem);
+        --board-score-font: clamp(1.74rem, 1.8vw, 2.3rem);
+      }
+
+      body.smartboard-mode .wrap {
+        grid-template-rows: auto auto 64px 1fr auto;
+      }
+
+      body.smartboard-mode .topHeader {
+        padding: 12px 72px 12px 14px;
+      }
+
+      body.smartboard-mode .topHeader h1 {
+        margin-bottom: 4px;
+      }
+
+      body.smartboard-mode .topHeader p {
+        font-size: clamp(0.88rem, 0.82vw, 0.98rem);
+        line-height: 1.12;
+      }
+
+      body.smartboard-mode .topHeader .cornerLogo {
+        width: 52px;
+        top: 10px;
+        right: 10px;
+      }
+
+      body.smartboard-mode .controlPanel {
+        padding: 8px 10px;
+        gap: 8px;
+      }
+
+      body.smartboard-mode .controlGroup label {
+        margin-bottom: 4px;
+        font-size: 0.82rem;
+      }
+
+      body.smartboard-mode .controlGroup select,
+      body.smartboard-mode .controlGroup button {
+        padding: 8px 12px;
+        border-radius: 12px;
+      }
+
+      body.smartboard-mode .playerCard,
+      body.smartboard-mode .midInfo {
+        min-height: 88px;
+        padding: 10px 12px;
+        gap: 4px;
+      }
+
+      body.smartboard-mode .avatarDisplay {
+        font-size: 1.55rem;
+        margin-bottom: 2px;
+      }
+
+      body.smartboard-mode .playerCard h2,
+      body.smartboard-mode .midInfo,
+      body.smartboard-mode .turnText {
+        font-size: 0.92rem;
+      }
+
+      body.smartboard-mode .turnLight {
+        width: 16px;
+        height: 16px;
+        margin-top: 4px;
+      }
+
+      body.smartboard-mode .arena {
+        height: 64px;
+      }
+
+      body.smartboard-mode .net {
+        width: 4px;
+        background: repeating-linear-gradient(to bottom, #8c8db2 0 7px, transparent 7px 11px);
+      }
+
+      body.smartboard-mode .ball {
+        width: 20px;
+        height: 20px;
+      }
+
+      body.smartboard-mode .questionPanel {
+        padding: 10px 12px 12px;
+        gap: 8px;
+      }
+
+      body.smartboard-mode .questionMeta {
+        gap: 8px;
+      }
+
+      body.smartboard-mode .category {
+        padding: 7px 12px;
+        font-size: 0.82rem;
+      }
+
+      body.smartboard-mode .question {
+        min-height: 76px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        line-height: 1.14;
+      }
+
+      body.smartboard-mode .question.idle {
+        font-size: 0.94rem;
+      }
+
+      body.smartboard-mode .answers {
+        gap: 8px;
+      }
+
+      body.smartboard-mode .answerBtn {
+        border-radius: 14px;
+        padding: 10px 12px;
+        font-size: 0.94rem;
+        line-height: 1.1;
+      }
+
+      body.smartboard-mode .message,
+      body.smartboard-mode .smallNote,
+      body.smartboard-mode #gameScreen .globalFooter {
+        font-size: 0.78rem;
+        line-height: 1.12;
+      }
+    }
+
   </style>
 </head>
 <body class="compact-lock">
